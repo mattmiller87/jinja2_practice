@@ -1,0 +1,4 @@
+router bgp {{ id }}
+{%- for item in bgp %}
+ neighbor {{ item.neighbor }} remote-as {{ item.remote_as }}
+{%- endfor %}

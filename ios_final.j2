@@ -1,0 +1,11 @@
+{% include "baseline.j2" %}
+!
+hostname {{ name }}
+!
+{% include "interface.j2" %}
+!
+{% include "bgp.j2" %}
+!
+{% include "route_map.j2" %}
+!
+! We did it!
