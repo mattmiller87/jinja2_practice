@@ -1,0 +1,10 @@
+!
+route-map ADVERTISE-AGGREGATE-V4 permit 10 
+ set origin igp
+ set community {{ asn }}:1 65500:900 65500:910 additive
+!
+route-map ADVERTISE-NETWORK-V4 permit 10 
+ description Applies parameters to routes added by the network command in the BGP process
+ set origin igp
+ set community {{ asn }}:1 65500:900 65500:910 additive
+!
